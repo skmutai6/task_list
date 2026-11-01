@@ -77,13 +77,11 @@ taskInput.addEventListener('keypress', (event) => {
 
 // Delete a task
 function formatTimestamp(date) {
-    return date.toLocaleString(undefined, {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+    return date.toLocaleTimeString(undefined, {
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit'
+        second: '2-digit',
+        hour12: false
     });
 }
 
