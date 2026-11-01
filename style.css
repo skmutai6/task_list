@@ -114,12 +114,30 @@
     opacity: 0.6;
 }
 
+.taskHeader,
 .taskItem {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr auto;
+    gap: 10px;
     align-items: center;
     padding: 10px;
+}
+
+.taskHeader {
+    border-bottom: 2px solid #222;
+    font-weight: bold;
+}
+
+.taskItem {
     border-bottom: 1px solid #ddd;
+}
+
+.taskTimestamp {
+    font-size: 0.85rem;
+}
+
+.taskStatus {
+    font-weight: bold;
 }
 #newTask {
     display: left;

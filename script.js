@@ -41,16 +41,25 @@ function addTask() {
         taskTextElement.className = 'taskText';
         taskTextElement.textContent = formatTaskText(taskText);
 
+        const statusElement = document.createElement('span');
+        statusElement.className = 'taskStatus';
+        statusElement.textContent = 'Pending';
+
+        const timestampElement = document.createElement('span');
+        timestampElement.className = 'taskTimestamp';
+        timestampElement.textContent = formatTimestamp(new Date());
+
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'deleteBtn';
         deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
 
-        taskItem.append(taskTextElement, deleteBtn);
+        taskItem.append(taskTextElement, statusElement, timestampElement, deleteBtn);
         taskList.prepend(taskItem);
         taskInput.value = '';
 
         taskTextElement.addEventListener('click', () => {
             taskItem.classList.toggle('completed');
+            updateTaskTimestamp(taskItem);
             updateTaskCounts();
         });
 
@@ -65,6 +74,24 @@ taskInput.addEventListener('keypress', (event) => {
         addTask();
     }
 });
+
+// Delete a task
+function formatTimestamp(date) {
+    return date.toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+}
+
+function updateTaskTimestamp(taskItem) {
+    const isCompleted = taskItem.classList.contains('completed');
+    taskItem.querySelector('.taskStatus').textContent = isCompleted ? 'Completed' : 'Pending';
+    taskItem.querySelector('.taskTimestamp').textContent = formatTimestamp(new Date());
+}
 
 // Delete a task
 function deleteTask(taskItem) {
