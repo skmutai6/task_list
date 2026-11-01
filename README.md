@@ -1,16 +1,17 @@
 # Task List
 
-A simple browser-based task manager for adding, completing, deleting, and clearing tasks. The app also displays live task totals, a current date, and success or error messages.
+A simple browser-based task manager for adding, completing, deleting, and clearing tasks. The app also displays live task totals, current date, and success/error messages.
+Ideal for learning HTML, CSS, and JavaScript basics as a beginner.
 
 ## Features
 
-- Add new tasks
+- Display the current date
+- Create new tasks
 - Prevent duplicate tasks
 - Mark tasks as completed
 - Delete individual tasks
 - Clear all completed tasks
 - View total, pending, completed, and deleted task counts
-- Display the current date
 - Show success and error notifications
 
 ## Tech Stack
@@ -24,7 +25,6 @@ A simple browser-based task manager for adding, completing, deleting, and cleari
 
 ### Prerequisites
 
-- A modern web browser
 - Git
 
 ### Clone the Repository
@@ -51,3 +51,9 @@ Then visit [http://localhost:8000](http://localhost:8000) in your browser.
 3. Select the trash button to delete a task.
 4. Select **Clear Completed** to remove all completed tasks.
 5. Use the counters at the bottom of the app to review task activity.
+
+## Author
+
+- **Email:** skmutai6@gmail.com
+- **Phone:** +254723486
+- **GitHub:** [skmutai6](https://github.com/skmutai6)
