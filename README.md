@@ -1,7 +1,7 @@
 # Task List
 
-A simple browser-based task manager for adding, completing, deleting, and clearing tasks. The app also displays live task totals, current date, and success/error messages.
-Ideal for learning HTML, CSS, and JavaScript basics as a beginner.
+- A simple browser-based task manager for adding, completing, deleting, and clearing tasks. The app also displays live task totals, current date, and success/error messages.
+- Ideal for learning HTML, CSS, and JavaScript basics as a beginner.
 
 ## Features
 
@@ -55,5 +55,5 @@ Then visit [http://localhost:8000](http://localhost:8000) in your browser.
 ## Author
 
 - **Email:** skmutai6@gmail.com
-- **Phone:** +254723486
+- **Phone:** +254723486218
 - **GitHub:** [skmutai6](https://github.com/skmutai6)
