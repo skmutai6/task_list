@@ -59,6 +59,9 @@ function addTask() {
         taskItem.classList.toggle('completed');
         updateTaskTimestamp(taskItem);
         updateTaskCounts();
+        if (taskItem.classList.contains('completed')) {
+            showMessage('Task Successfully Completed!', 'success');
+        }
     });
 
     deleteBtn.addEventListener('click', () => deleteTask(taskItem));
